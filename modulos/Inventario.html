@@ -1,41 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="../css/inventario.css">
     <title>Inventario</title>
 </head>
+
 <body>
-    <h1>Modulo de Inventario</h1>
-    <hr><br>
-    <form action="">
-        <label for="">Categoria: </label>
-        <input type="text" id="categoria" required placeholder="Ingresa la categoria">
-        <br>
-        <label for="">Codigo del Producto: </label>
-        <input type="number" id="codigo_producto" required placeholder="Ingrese el Codigo del Producto">
-        <br>
-        <label for="">Nombre del Producto: </label>
-        <input type="text" id="nombre_producto" required placeholder="Ingrese el Nombre del Producto">
-        <br>
-        <label for="">Descripcion del Producto: </label>
-        <input type="text" id="descripcion_producto" required placeholder="Ingrese la descripcion del Producto">
-        <br>
-        <label for="">Cantidad de Productos: </label>
-        <input type="number" id="cantidad_productos" required placeholder="Ingrese la cantidad de los productos">
-        <br>
-        <label for="">Precio Unitario: </label>
-        <input type="number" id="precio_unitario" required placeholder="Ingreese el Precio Unitario del Producto">
-        <br>
-        <label for="">Provedor: </label>
-        <input type="text"" id="provedor" required placeholder="Ingreese el nombre del Provedor">
-        <br>
-        <button type="button" onclick="location.href='../index.html'">Volver al inicio</button>
-        <button type="submit">Guardar </button>
+    <form>
+        <div class="container">
+            <h1>Modulo de Inventario</h1>
+            <hr><br>
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="Categoria:" id="categoria" required>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Codigo del Producto:" id="codigo_producto" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Nombre del Producto:" id="nombre_producto" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Descripcion del Producto:" id="descripcion_producto"
+                        required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Cantidad de Productos:" id="cantidad_productos"
+                        required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Precio Unitario:" id="precio_unitario" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="number" placeholder="Provedor: " id="provedor" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <hr><br>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success">
+                        Guardar
+                    </button>
+                </p>
+                
+            </div>
+            <div class="field">
+                <p class="control">
+                    <button class="button is-danger" onclick="location.href='../index.html'">
+                        Volver al inicio
+                    </button>
+                </p>
+            </div>
+
+        </div>
     </form>
 </body>
+
 </html>
-
-
-
-
