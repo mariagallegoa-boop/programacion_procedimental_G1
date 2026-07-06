@@ -1,25 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Login</title>
 </head>
+
 <body>
-    <h1>Modulo de Login</h1>
-    <hr><br>
-    <form action="">
-        <label for="">Documento de Identidad: </label>
-        <input type="text" id="cedula_cuidadania" required placeholder="Ingrese su Documento de identidad">
-        <br>
-        <label for="">Contraseña: </label>
-        <input type="password" id="contrasena" required placeholder="Ingrese su Contraseña">
-        <br>
-        <button type="button" onclick="location.href='../index.html'">Volver al Inicio</button>
-        <button type="submit">Ingresar</button>
-    </form>
+    <div class="container">
+        <h1 class="title is-4 has-text-centered">LOGIN</h1>
+        <hr />
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <span class="select is-info">
+                    <select id="tipo_documento">
+                        <option selected>Selecccione Tipo de Documento</option>
+                        <option value="tarjeta_tdentidad">Tarjeta de Identidad</option>
+                        <option value="cedula_cuidadania">Cedula de Cuidadania</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="permiso_especial">Permiso Especial</option>
+                    </select>
+                </span>
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+        </div>
+
+
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input is-info" type="text" placeholder="Documento de Identidad:" id="documento_identidad"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input is-info" type="password" placeholder="Contraseña" id="contrasena" required />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+        <hr>
+        <div class="buttons is-flex is-justify-content-center">
+            <a type="type" class="button is-danger" href="../index.html"> Home </a>
+            <button class="button is-info is-dark" id="btnGuardar">Guardar</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/login.js"></script>
 </body>
+
 </html>
 
-
-
+<!-- 
+Login
+Tipo de Documento
+Numero de Documento
+Contraseña 
+-->

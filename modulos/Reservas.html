@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
     <title>Reservas</title>
 </head>
-<body>
-    <h1>Modulo de Reservas</h1>
-    <hr>
-    <form action="">
 
-    </form>
+<body>
+    <div class="container">
+        <h1 class="title is-4 has-text-centered">RESERVAS</h1>
+        <hr />
+
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input is-info" type="text" placeholder="Nombre Completo:" id="nombre_completo"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+        </div>
+
+
+
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input is-info" type="text" placeholder="Fecha de la Reserva" id="fecha_reserva"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left has-icons-right">
+                <input class="input is-info" type="password" placeholder="Cantidad de Personas" id="cantidad_personas" required />
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+
+        <hr>
+        <div class="buttons is-flex is-justify-content-center">
+            <a type="type" class="button is-danger" href="../index.html"> Home </a>
+            <button class="button is-info is-dark" id="btnGuardar">Guardar</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/reservas.js"></script>
 </body>
+
 </html>
 
-
-
+<!-- TIPO MESA
+NOMBRE COMPLETO
+FECHA RESERVA 
+CANTIDAD DE PERSONAS -->

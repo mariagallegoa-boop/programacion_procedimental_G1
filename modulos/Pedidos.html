@@ -1,18 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
     <title>Pedidos</title>
 </head>
+
 <body>
-    <h1>Modulo de Pedidos</h1>
-    <hr>
-    <form action="">
+    <div class="container">
+        <h1 class="title is-4 has-text-centered">PEDIDOS</h1>
+        <hr />
+        <div class="field">
+            <p class="control has-icons-left">
+                <span class="icon is-small is-left">
+                    <i class="fa-notdog fa-solid fa-layer-group"></i>
+                </span>
+                <input class="input is-info" type="text" placeholder="Producto:" id="Producto" required />
+            </p>
+        </div>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input is-info" type="number" placeholder="Direccion:" id="direccion"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-barcode"></i>
+                </span>
+            </p>
+        </div>
 
-    </form>
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input is-info" type="text" placeholder="Nombre del Usuario:" id="nombre_usuario"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input is-info" type="text" placeholder="Cantidad"  id="cantidad" 
+                required />
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-list"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input is-info" type="number" placeholder="Metodo de Pago:" id="metodo_pago"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-0"></i>
+                </span>
+            </p>
+        </div>
+
+        <div class="field">
+            <p class="control has-icons-left">
+                <input class="input is-info" type="number" placeholder="Telefono:" id="telefono"
+                    required />
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                </span>
+            </p>
+        </div>
+        <hr>
+        <div class="buttons is-flex is-justify-content-center">
+            <a type="button" class="button is-danger" href="../index.html">Home</a>
+            <button class="button is-info is-dark" id="btnGuardar">Guardar</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/pedidos.js"></script>
 </body>
+
+
+<!--         Pedidos
+PRODUCTO 
+ DIRECCION
+ NOMBRE DEL USUARIO 
+ CANTIDAD
+ METODO DE PAGO
+ TELEFONO 
+ -->
 </html>
-
-
-

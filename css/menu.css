@@ -2,10 +2,12 @@ td,th{
     border: 1px double #fff;
     padding: 5px;
 }
-
 table {
     width: 100%;
     color: aliceblue;
     background-image: url("https://imgs.search.brave.com/lQINtiIBVvAGmUpmwkSVwILjYRpfwYLuUjyHN8lV8dU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vcmF6Z3VseWFl/di9yYXpndWx5YWV2/MjEwMy9yYXpndWx5/YWV2MjEwMzAwMDY4/LzE2NTI5NjI4Ni11/bi1wbGF0by1uZWdy/by12YWMlQzMlQURv/LXktdW4tdGVuZWRv/ci1jb24tdW4tY3Vj/aGlsbG8tc29icmUt/dW4tZm9uZG8tb3Nj/dXJvLWZvdG8tcGxh/bmEtY29uY2VwdG8t/ZGUuanBnP3Zlcj02");
     background-size: cover;
+}
+.container{
+    padding: 5%;
 }
