@@ -7,7 +7,7 @@ function ValidarInformacion() {
     let precio_unitario = document.getElementById("precio_unitario").value;
     let provedor = document.getElementById("provedor").value;
 
-    if (
+    if ( 
         !categoria ||
         !codigo_prodt ||
         !nombre_prodt ||
@@ -16,16 +16,6 @@ function ValidarInformacion() {
         !precio_unitario ||
         !provedor
     ) {
-        console.log(
-            `Informacion del Producto: \n
-            ${categoria} \n
-            ${codigo_prodt} \n
-            ${nombre_prodt} \n
-            ${descripcion_prodt} \n
-            ${cantidad_prodt} \n
-            ${precio_unitario} \n
-            ${provedor}`
-        );
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -45,6 +35,16 @@ function ValidarInformacion() {
             ${precio_unitario} \n
             ${provedor}`
         );
+        if(categoria != "/^[a-zA-Z]/"){
+            console.log("Categoria Debe agregar solo letras");
+        }
+        if(codigo_prodt != "/^\d+$/" ){
+            console.log("Codigo del producto Debe agregar solo letras");
+
+        }
+
+
+
         Swal.fire({
             position: "top-end",
             icon: "success",
