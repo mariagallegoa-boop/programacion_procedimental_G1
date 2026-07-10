@@ -28,22 +28,19 @@ function ValidarInformacion() {
             ${provedor}`
         );
         if (!/^[a-zA-Z]+$/.test(categoria)) {
+            console.log("Categoria debe contener letras")
             Swal.fire({
-                position: "top-end",
-                icon: "error",
                 title: "Categoria debe contener letras",
-                showConfirmButton: false,
-                timer: 1500
+                icon: "error"
             });
+            return;
         }
         if (!/^\d+$/.test(codigo_prodt)) {
             Swal.fire({
-                position: "top-end",
-                icon: "error",
-                title: "Codigo del producto debe contener número",
-                showConfirmButton: false,
-                timer: 1500
+                 title: "Codigo del producto debe contener números",
+                icon: "error"
             });
+            return;
         }
 
         Swal.fire({
