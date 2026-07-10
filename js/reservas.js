@@ -4,7 +4,7 @@ function ValidarInformacion() {
     let cantidad_personas = document.getElementById("cantidad_personas").value;
 
     if (
-        !nombre_completo ||
+        !nombre_completo || // nombre_completo = "" || nombre_completo = null 
         !fecha_reserva ||
         !cantidad_personas 
     ) {

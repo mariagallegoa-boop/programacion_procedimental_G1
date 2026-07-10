@@ -7,15 +7,7 @@ function ValidarInformacion() {
     let precio_unitario = document.getElementById("precio_unitario").value;
     let provedor = document.getElementById("provedor").value;
 
-    if ( 
-        !categoria ||
-        !codigo_prodt ||
-        !nombre_prodt ||
-        !descripcion_prodt ||
-        !cantidad_prodt ||
-        !precio_unitario ||
-        !provedor
-    ) {
+    if (!categoria || !codigo_prodt || !nombre_prodt || !descripcion_prodt || !cantidad_prodt || !precio_unitario || !provedor) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -35,15 +27,24 @@ function ValidarInformacion() {
             ${precio_unitario} \n
             ${provedor}`
         );
-        if(categoria != "/^[a-zA-Z]/"){
-            console.log("Categoria Debe agregar solo letras");
+        if (!/^[a-zA-Z]+$/.test(categoria)) {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Categoria debe contener letras",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
-        if(codigo_prodt != "/^\d+$/" ){
-            console.log("Codigo del producto Debe agregar solo letras");
-
+        if (!/^\d+$/.test(codigo_prodt)) {
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Codigo del producto debe contener número",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
-
-
 
         Swal.fire({
             position: "top-end",
