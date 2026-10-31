@@ -27,12 +27,14 @@ switch(categoria){
         console.log("");
 }
 
-if (categoria != "Bebida"){
+if (categoria != "Bebida" && edad >= 18 && genero == "Masculino"){
     console.log("Es una bebida");
-}else if(categoria == "Aseo"){
-    console.log("Es un V");
-}else {
-    console.log("ninguna de las anteriores")
+}
+else if(categoria == "Aseo"){
+    console.log("Es un Aseo");
+}
+else {
+    console.log("ninguna de las anteriores");
 }
 
 /**

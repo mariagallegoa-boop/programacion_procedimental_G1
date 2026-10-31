@@ -7,7 +7,8 @@ function ValidarInformacion() {
     let precio_unitario = document.getElementById("precio_unitario").value;
     let provedor = document.getElementById("provedor").value;
 
-    if (!categoria || !codigo_prodt || !nombre_prodt || !descripcion_prodt || !cantidad_prodt || !precio_unitario || !provedor) {
+    if (!categoria || !codigo_prodt || !nombre_prodt || !descripcion_prodt ||
+        !cantidad_prodt || !precio_unitario || !provedor) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -27,6 +28,19 @@ function ValidarInformacion() {
             ${precio_unitario} \n
             ${provedor}`
         );
+
+        if (categoria != /^[a-zA-Z]+$/) {
+            console.log("Categoria debe contener letras")
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Categoria debe contener letras",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return;
+        }
+
         if (!/^[a-zA-Z]+$/.test(categoria)) {
             console.log("Categoria debe contener letras")
             Swal.fire({
@@ -37,20 +51,14 @@ function ValidarInformacion() {
         }
         if (!/^\d+$/.test(codigo_prodt)) {
             Swal.fire({
-                 title: "Codigo del producto debe contener números",
+                title: "Codigo del producto debe contener números",
                 icon: "error"
             });
             return;
         }
-
-        Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Informacion Guardada Correctamente",
-            showConfirmButton: false,
-            timer: 1500
-        });
     }
+
 }
 
 document.getElementById("btnGuardar").onclick = ValidarInformacion;
+

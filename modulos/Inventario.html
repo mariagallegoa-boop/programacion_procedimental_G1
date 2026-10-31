@@ -11,7 +11,8 @@
 </head>
 
 <body>
-        <div class="container">
+    <div class="container">
+        <form action="../php/inventario.php" method="POST">
             <h1 class="title is-4 has-text-centered">INVENTARIO</h1>
             <hr />
             <div class="field">
@@ -19,13 +20,14 @@
                     <span class="icon is-small is-left">
                         <i class="fa-notdog fa-solid fa-layer-group"></i>
                     </span>
-                    <input class="input is-info" type="text" placeholder="Categoria:" id="categoria" required />
+                    <input class="input is-info" type="text" placeholder="Categoria:" id="categoria" name="categoria"
+                        required />
                 </p>
             </div>
             <div class="field">
                 <p class="control has-icons-left">
                     <input class="input is-info" type="number" placeholder="Codigo del Producto:" id="codigo_producto"
-                        required />
+                        name="codigo_producto" required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-barcode"></i>
                     </span>
                 </p>
@@ -33,7 +35,7 @@
 
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input is-info" type="text" placeholder="Nombre del Producto:" id="nombre_producto"
+                    <input class="input is-info" type="text" placeholder="Nombre del Producto:" id="nombre_producto" name="nombre_producto"
                         required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-cart-shopping"></i>
                     </span>
@@ -43,7 +45,7 @@
             <div class="field">
                 <p class="control has-icons-left">
                     <input class="input is-info" type="text" placeholder="Descripcion del Producto:"
-                        id="descripcion_producto" required />
+                        id="descripcion_producto" name="descripcion_producto" required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-list"></i>
                     </span>
                 </p>
@@ -52,7 +54,7 @@
             <div class="field">
                 <p class="control has-icons-left">
                     <input class="input is-info" type="number" placeholder="Cantidad de Productos:"
-                        id="cantidad_productos" required />
+                        id="cantidad_productos" name="cantidad_productos" required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-0"></i>
                     </span>
                 </p>
@@ -61,7 +63,7 @@
             <div class="field">
                 <p class="control has-icons-left">
                     <input class="input is-info" type="number" placeholder="Precio Unitario:" id="precio_unitario"
-                        required />
+                        name="precio_unitario" required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-arrow-down-wide-short"></i>
                     </span>
                 </p>
@@ -69,7 +71,9 @@
 
             <div class="field">
                 <p class="control has-icons-left">
-                    <input class="input is-info" type="text" placeholder="Provedor: " id="provedor" required />
+                    <input class="input is-info" type="text" placeholder="Provedor: " 
+                    id="provedor" name="proveedor"
+                        required />
                     <span class="icon is-small is-left"><i class="fa-solid fa-truck-fast"></i>
                     </span>
                 </p>
@@ -77,20 +81,12 @@
             <hr>
             <div class="buttons is-flex is-justify-content-center">
                 <a type="button" class="button is-danger" href="../index.html">Home</a>
-                <button class="button is-info is-dark" id="btnGuardar">Guardar</button>
+                <button class="button is-info is-dark" type="submit" id="btnGuardar">Guardar</button>
             </div>
-        </div>
+        </form>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/inventario.js"></script>
 </body>
-</html>
 
-<!-- 
-Categoria
-Codigo del Producto
-Nombre del Producto
-Descripcion del Producto
-Cantidad de Productos
-Precio Unitario
-Provedor 
--->
+</html>

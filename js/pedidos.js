@@ -7,12 +7,8 @@ function ValidarInformacion() {
     let telefono = document.getElementById("telefono").value;
 
 
-    if (
-        !producto || !dreccion ||
-        !nombre_usuario || !cantidad ||
-        !metodo_pago || !telefono 
-    ) {
-        console.log(
+    if (!producto || !dreccion ||  !nombre_usuario || !cantidad || !metodo_pago || !telefono ){
+        console.log( 
             `Informacion del Inicio de Sesion: \n
             ${producto} \n ${dreccion} \n
             ${nombre_usuario} \n ${cantidad} \n
